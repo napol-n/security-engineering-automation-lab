@@ -1,0 +1,5 @@
+services:
+  linuxbox:
+    build:
+      context: .
+    command: ["sleep", "infinity"]
