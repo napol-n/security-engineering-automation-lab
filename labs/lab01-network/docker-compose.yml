@@ -1,0 +1,27 @@
+services:
+
+  app:
+    build:
+      context: ./app
+
+    networks:
+      - lab-network
+
+  nginx:
+    image: nginx:1.27-alpine
+
+    ports:
+      - "8080:80"
+
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+
+    depends_on:
+      - app
+
+    networks:
+      - lab-network
+
+
+networks:
+  lab-network:
