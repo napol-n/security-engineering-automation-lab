@@ -32,7 +32,7 @@ Environment and dependency awareness helps distinguish application failures, net
 
 ## Remediation
 
-Not applicable yet. Service failure remediation will be documented during Lab 01.
+The simulated Nginx upstream port mismatch was remediated by restoring the correct backend port, validating the effective configuration, and repeating the original HTTP request to verify recovery.
 
 ## Interview Questions
 
